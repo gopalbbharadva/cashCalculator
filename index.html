@@ -1,14 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cash Calculator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <section>
+        <p>
+          Enter bill amount and payment for that , and change calculator will
+          give you return change.
+        </p>
+        <div class="data">
+          <h4>Amount:</h4>
+          <input type="number" />
+        </div>
+        <button>Pay money</button>
+        <div class="data" id="payment">
+          <h4>Payment:</h4>
+          <input type="number" />
+        </div>
+        <button>Check</button>
+
+        <div class="result">
+          <table>
+            <tr>
+              <th>Available denomenations</th>
+              <th>no. of denomenations</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td class="value">0</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td class="value">0</td>
+            </tr>
+            <tr>
+              <td>20</td>
+              <td class="value">0</td>
+            </tr>
+            <tr>
+              <td>100</td>
+              <td class="value">0</td>
+            </tr>
+            <tr>
+              <td>500</td>
+              <td class="value">0</td>
+            </tr>
+            <tr>
+              <td>2000</td>
+              <td class="value">0</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </div>
     <script src="style.css"></script>
-</body>
+  </body>
 </html>
