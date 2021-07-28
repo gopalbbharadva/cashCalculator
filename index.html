@@ -6,11 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cash Calculator</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="main">
       <section>
-        <p>
+        <p style="font-weight: bold;">
           Enter bill amount and payment for that , and change calculator will
           give you return change.
         </p>
@@ -33,11 +40,12 @@
         <p id="error3" style="color: #ef4444; display: none">
           Payment should be grater than amount.
         </p>
-        <h5 style="display: none;font-size: 1.2rem; margin:0.5rem">Change notes:</h5>
+        <h5 style="display: none; font-size: 1.2rem; margin: 0.5rem">
+        </h5>
         <div>
           <table>
             <tr>
-              <th>Available denomenations</th>
+              <th>Available Denomination</th>
               <th id="denom">No. of Notes</th>
             </tr>
             <tr>
@@ -74,7 +82,19 @@
           No change will returned.
         </p>
       </section>
+      <footer>
+        <a href="https://github.com/gopalbbharadva/cashCalculator">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://twitter.com/Gopal_33_gb">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/gopal-bharadva-1aa880176/">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </footer>
     </div>
+
     <script src="app.js"></script>
   </body>
 </html>

@@ -43,12 +43,13 @@ buttons[1].addEventListener("click", () => {
     error2.style.display = "block";
     error3.style.display = "none";
     table.style.display = "none";
-    changeText.style.display="none";
+    changeText.style.display="none" ;
   }
 });
 
 function calculateNotes(bill, payment) {
   var changeMoney = payment - bill;
+  changeText.textContent=`Change notes for: ${changeMoney}`
   if (changeMoney === 0) {
     nochange.style.display = "block";
     table.style.display = "none";
