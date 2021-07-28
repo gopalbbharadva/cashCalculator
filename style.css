@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
 body{
     font-family: 'Lexend', sans-serif;
-    height: 90vh;
-    margin: 0;
 }
 .main{
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 section{
-    margin: auto;
+    margin: 1rem auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -80,4 +79,29 @@ td{
 }
 .value{
     border-left: 2px solid black;
+}
+
+a{
+    padding: 1rem;
+    color: black;
+    font-size: 3rem;
+    text-decoration: none;
+}
+a:hover{
+    opacity: 0.8;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    padding: 0.5rem;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #D1D5DB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 615px;
+    margin-top: auto;
 }
