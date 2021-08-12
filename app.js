@@ -1,55 +1,54 @@
 var inputs = document.querySelectorAll("input");
 var buttons = document.querySelectorAll("button");
 var payment = document.querySelector("#payment");
-var error1 = document.querySelector("#error1");
-var error2 = document.querySelector("#error2");
-var error3 = document.querySelector("#error3");
+var error = document.querySelector("#error");
 var table = document.querySelector("table");
 var nochange = document.querySelector("#nooutput");
 var results = document.querySelectorAll(".value");
-var changeText=document.querySelector('h5');
+var changeText = document.querySelector("h5");
 var denominations = [1, 5, 10, 20, 100, 500, 2000];
+
+function errorMessage(errorMsg) {
+  error.innerText = errorMsg;
+}
 
 buttons[0].addEventListener("click", () => {
   if (Number(inputs[0].value) > 0) {
     payment.style.display = "flex";
     buttons[1].style.display = "block";
-    error1.style.display = "none";
-    buttons[0].style.display="none";
-  } else {
-    error1.style.display = "block";
-  }
+    buttons[0].style.display = "none";
+    error.style.display = "none";
+  } else errorMessage("Bill should be greater than 0");
 });
 
 buttons[1].addEventListener("click", () => {
   var bill = inputs[0].value;
   var payment = inputs[1].value;
-  clearNotes(results);
-
+  // clearNotes(results);
   if (Number(bill) > 0 && Number(payment > 0)) {
+    error.style.display = "none";
     if (Number(payment) >= Number(bill)) {
       table.style.display = "block";
-      changeText.style.display="block";
-      error2.style.display = "none";
-      error3.style.display = "none";
+      changeText.style.display = "block";
+      error.style.display = "none";
       calculateNotes(bill, payment);
     } else {
+      error.style.display = "block";
       table.style.display = "none";
-      changeText.style.display="none";
-      error3.style.display = "block";
-      error2.style.display = "none";
+      changeText.style.display = "none";
+      errorMessage("Payment should be greater than amount.");
     }
   } else {
-    error2.style.display = "block";
-    error3.style.display = "none";
+    error.style.display = "block";
+    errorMessage("Bill and payment should be greater than 0");
     table.style.display = "none";
-    changeText.style.display="none" ;
+    changeText.style.display = "none";
   }
 });
 
 function calculateNotes(bill, payment) {
   var changeMoney = payment - bill;
-  changeText.textContent=`Change notes for: ${changeMoney}`
+  changeText.textContent = `Change notes for: ${changeMoney}`;
   if (changeMoney === 0) {
     nochange.style.display = "block";
     table.style.display = "none";
@@ -69,8 +68,8 @@ function compare(remainAmt, denom, index) {
   return remainAmt;
 }
 
-function clearNotes(results){
-    for(var item of results){
-        item.textContent='';
-    }
+function clearNotes(results) {
+  for (var item of results) {
+    item.textContent = "";
+  }
 }
