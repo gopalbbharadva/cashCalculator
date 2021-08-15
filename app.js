@@ -47,6 +47,7 @@ buttons[1].addEventListener("click", () => {
 });
 
 function calculateNotes(bill, payment) {
+  nochange.style.display = "none";
   var changeMoney = payment - bill;
   changeText.textContent = `Change notes for: ${changeMoney}`;
   if (changeMoney === 0) {
